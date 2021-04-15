@@ -1,0 +1,15 @@
+:root{
+    --red : red;
+    --green : green;
+    --blue : blue;
+    --orange : orange;
+    --black : black;
+    --white : white;
+    --yellow : yellow;
+    --sliver : rgb(94, 92, 92);
+    --gray : gray;
+    --purple : purple;
+    --skyblue : skyblue;
+    --lime : lime;
+    --boxShadow : 5px 8px 8px -6px rgba(0,0,0,0.5);
+}

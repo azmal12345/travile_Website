@@ -1,0 +1,978 @@
+@import url("../style_Css_Javascript/color.css");
+@import url("../fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf");
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: #F9F9F7;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+
+img, i{
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+label{
+    font-size: 14px;
+    color: var(--sliver);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 35px;
+    width: 100%;
+    background-color: #003399;
+    box-shadow: var(--boxShadow);
+    position: sticky;
+    z-index: 9999;
+}
+
+header .logo{
+    width: 100px;
+}
+
+.logo img{
+    width: 70px;
+}
+
+header nav{
+    float: right;
+}
+
+header .navbar_List{
+    padding: 0;
+    margin: -61px 0;
+    display: flex;
+}
+
+header .navbar_List li{
+    list-style: none;
+}
+
+header .navbar_List li a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.795);
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 1.135rem;
+    display: block;
+}
+
+header .navbar_List li a:hover{
+    background-color: #0555f342;
+    color: var(--white);
+}
+
+header .navbar_List li a i{
+    font-size: 1rem;
+    display: inline-block;
+}
+
+header .bars_icon{
+    width: 50px;
+    position: absolute;
+    top: 24px;
+    right: 42px;
+    cursor: pointer;
+    display: none;
+}
+
+.bars_icon .bars_line{
+    width: 35px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px 0;
+}
+
+/* ********************* flag icon with currency ******************************** */
+
+.section{
+    width: 100%;
+    max-width: 100%;
+}
+
+.flag_container{
+    position: fixed;
+    top: 69px;
+    right: 180px;
+    width: 15%;
+    height: 150px;
+    max-width: 100%;
+    background-color: var(--white);
+    overflow-y: auto;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+    z-index: 999999;
+    border-radius: 3px;
+    display: none;
+}
+
+.flag_container.flag_box{
+    display: block;
+}
+
+.flag_container ul{
+    /* text-align: center; */
+}
+
+.flag_container ul li{
+    margin: 5px 10px;
+    padding: 5px 0;
+}
+
+.flag_container ul li:hover{
+    background-color: rgb(248, 246, 246);
+    padding: 5px 0;
+}
+
+.flag_container ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--black);
+}
+
+.flag_container ul li a img{
+    width: 35px;
+    padding: 0 5px;
+}
+
+.flag_container .iconClose{
+    float: right;
+    margin: 0 15px 0 0;
+    font-size: 1.50rem;
+}
+
+.iconClose::before{
+    content: "X";
+    font-size: 1.50rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* ********************* my account details and loging ******************************** */
+.myAccount{
+    position: fixed;
+    top: 69px;
+    right: 10px;
+    width: 20%;
+    height: 200px;
+    max-width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    text-align: center;
+    z-index: 999999;
+    display: none;
+}
+
+.myAccount.myForm{
+    display: block;
+}
+
+.myAccount::before{
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 45%;
+    width: 25px;
+    height: 25px;
+    background-color: var(--white);
+    transform: rotate(44deg);
+}
+
+.myAccount .timesIcon{
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.30rem;
+    font-weight: normal;
+    border-radius: 100%;
+    background-color: var(--white);
+    line-height: 36px;
+}
+
+.myAccount .btn{
+    width: 80%;
+    margin-top: 21.50px;
+    background-color: #013CB0;
+    color: var(--white);
+    box-shadow: none;
+}
+
+.myAccount .btn:hover{
+    background-color: #0554f3d7;
+}
+
+.logIn_new{
+    margin-top: 10px;
+}
+
+.logIn_new label{
+    color: var(--sliver);
+}
+
+.logIn_new span a{
+    color: #003399;
+}
+
+.myAccount .btnBook{
+    margin-top: 12px;
+    font-size: 12px;
+}
+
+/* ********************* flag form pop bix ******************************** */
+.flag_pop_box{
+    width: 100%;
+    padding: 0px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+}
+
+.flag_pop_box::before{
+    width: 100%;
+    height: 200vh;
+    content: "";
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    top: -150px;
+    z-index: -999;
+}
+
+.flag_pop_box i{
+    position: absolute;
+    right: 100px;
+    font-size: 2.50rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.flag_pop_box i:hover{
+    animation: buttonCircle 1s ease;
+    color: var(--orange);
+}
+
+@keyframes buttonCircle{
+    0%{transform: rotate(350deg);}
+    50%{transform: rotate(0deg);}
+    10%{transform: rotate(350deg);}
+}
+
+/* .overflowPop{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9999999;
+} */
+
+.flag_pop_box .flag_pop_form{
+    width: 30%;
+    margin: 0 auto;
+    background-color: var(--white);
+    box-shadow: 5px 7px 20px -6px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.flag_pop_form form, input, select{
+    width: 80%;
+    margin: 0 auto;
+    padding: 25px 0;
+}
+
+.flag_pop_form .flag_pop_img_box{
+    width: 100%;
+}
+
+.flag_pop_img_box img{
+    width: 100%;
+    height: 200px;
+}
+
+#popAlertBoxShow{
+    display: none;
+}
+
+#popAlertBoxShow.addFlag{
+    display: block;
+}
+
+
+/* ********************* from pop account ******************************** */
+.container_pop_section{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    position: relative;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999;
+    display: none;
+    transition: 0.5s ease;
+    z-index: 99999999;
+}
+
+.container_pop_section::before{
+    width: 100%;
+    height: 200vh;
+    content: "";
+    position: absolute;
+    top: -200px;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: -9999;
+}
+
+/* javascript start  */
+
+.container_pop_section.formCardDisplay{
+    display: block;
+    transition: 0.5s ease;
+}
+
+.container_pop_section.popFormCardDisplay{
+    display: block;
+}
+
+.container_pop_section.createAccounnt1{
+    display: block;
+}
+
+/* javascript end  */
+
+.container_pop_section .pop_icon_show{
+    width: 100%;
+}
+
+.pop_icon_show i{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.pop_icon_show i:active{
+    color: var(--orange);
+    animation: 1s circelIcon ease;
+}
+
+@keyframes circelIcon{
+    0%{transform: rotate(350deg);}
+    50%{transform: rotate(0deg);}
+    100%{transform: rotate(0deg);}
+}
+
+.container_pop_section .container_flex_pop{
+    width: 30%;
+    height: 100%;
+    background-color: var(--white);
+    margin: 35px auto;
+    padding: 21.50px 25px;
+    box-shadow: 5px 7px 20px -6px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.container_flex_pop .login_name{
+    width: 100%;
+}
+
+.login_name h1{
+    font-size: 1.10rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: -10px;
+    color: var(--sliver);
+}
+
+.container_icon_pop{
+    margin: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_icon_pop .button_group_pop{
+    border: 1px solid #007BFF;
+    margin: 0 10px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.button_group_pop span{
+    padding: 10px;
+    background-color: var(--white);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.button_group_pop span i{
+    font-size: 1.20rem;
+    color: #007BFF;
+}
+
+.button_group_pop span img{
+    width: 15px;
+}
+
+.button_group_pop button{
+    background-color: #007BFF;
+    color: var(--white);
+    border: none;
+    outline: none;
+    border-radius: none;
+    padding: 7px 8px;
+}
+
+.container_text_pop{
+    width: 100%;
+}
+
+.container_text_pop p{
+    font-size: 14px;
+    color: #8d8c8c96;
+}
+
+.container_flex_pop p i{
+    font-size: 1.20rem;
+    font-weight: bold;
+}
+
+.form_group_pop{
+    margin: 35.50px 0;
+}
+
+.form_group_pop form input{
+    margin: 11.50px 0;
+    border: 2px solid #8d8c8c46;
+    box-shadow: none;
+    outline: none;
+}
+
+
+.form_group_pop form input:hover{
+    border: 2px solid #003399;
+    box-shadow: none;
+    outline: none;
+}
+
+.form_group_pop input::placeholder{
+     color: #8d8c8c96;
+}
+
+.form_group_pop form .forgotPassword{
+    position: relative;
+    top: -5px;
+    right: 83.50px;
+    font-size: 14px;
+    color: #b3aeae;
+}
+
+.form_group_pop form .forgotPassword1{
+    text-align: left;
+    font-size: 12px;
+}
+
+.form_group_pop form .forgotPassword:hover{
+    text-decoration: underline;
+    color: #007BFF;
+}
+
+.form_group_pop form button{
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: var(--white);
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding: 10px 0;
+}
+
+.form_group_pop form button:hover{
+    background-color: #003399;
+    color: var(--white);
+}
+
+.form_group_pop form span a{
+    margin-left: 10px;
+}
+
+.form_group_pop .border_bottm_dotted{
+    margin: 35px 0 10px 0;
+    width: 100%;
+    border-bottom: 2px dotted #8d8c8c96;
+}
+
+.form_group_pop form span{
+    position: relative;
+    top: 0;
+    right: 35px;
+    font-size: 14px;
+    color: #b3aeae;
+}
+
+/* ********************* Getaway Deals hotel ******************************** */
+.getwaySection{
+    width: 100%;
+    background-color: #003580;
+    padding: 10px 35px;
+    color: var(--white);
+}
+
+.getway{
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.getway h1{
+    font-size: 2rem;
+}
+
+.getway p{
+    font-size: 14px;
+}
+
+.rowGetway input, button{
+    width: 100%;
+    padding: 10px;
+    height: 50px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: none;
+    border: 3px solid var(--orange);
+    position: relative;
+}
+
+.rowGetway input[type="text"],input[type="date"]{
+    padding-left: 35px;
+    background-color: var(--white);
+}
+
+.rowGetway input[type="text"]::placeholder{
+    font-size: 12.50px;
+}
+
+.getway .getwayIcon{
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    z-index: 5;
+    color: #b3aeae;
+}
+
+.getway .getwayIcon2{
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    z-index: 5;
+    color: #b3aeae;
+}
+
+.rowGetway button{
+    background-color: #003580;
+    color: var(--white);
+    text-transform: capitalize;
+    outline: none;
+    cursor: pointer;
+}
+
+.rowGetway button:hover{
+    background-color: #003399;
+}
+
+.col, [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  
+}
+/* ********************* container book ******************************** */
+.containerBook{
+    width: 80%;
+    margin: -45px auto 0 auto;
+    background-color: var(--white);
+    padding: 15px 35px;
+    box-shadow: var(--boxShadow);
+    position: relative;
+    border-radius: 5px;
+}
+
+.containerBook i{
+    position: absolute;
+    top: 25%;
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--orange);
+}
+
+.containerBook h1{
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 35px;
+}
+
+.containerBook small{
+    padding-left: 35px;
+}
+/* ********************* card toutist place image ******************************** */
+.cardToursitPlace{
+    width: 90%;
+    margin: 50px auto;
+}
+
+.card-troustPlace{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_troustFlex{
+    flex: 1 1 150px;
+    margin: 5px;
+    border: 1px solid #5d49498e;
+    border-radius: 5px;
+    position: relative;
+    background-color: var(--white);
+    box-shadow: var(--boxShadow);
+    transition: 0.5s ease;
+    border-bottom: 5px solid var(--orange);
+}
+
+.card_troustFlex:hover{
+    transform: translateY(-15px);
+    border-bottom: 5px solid red;
+}
+
+.cardOne{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 20px;
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+.cardOne p{
+    font-size: 12px;
+    text-align: center;
+}
+
+
+.card_troustFlex img{
+    height: 172px;
+}
+
+.card_troustFlex .priceList{
+    display: flex;
+    margin: 15px 10px;
+}
+
+.card_troustFlex .btn{
+    background-color: var(--orange);
+    font-size: 14.50px;
+    border: none;
+    outline: none;
+}
+
+.priceList .getwayDetailsText{
+    padding: 2px 5px;
+    border-radius: 3px;
+    background-color: var(--orange);
+    font-size: 12px;
+    color: var(--white);
+}
+
+.priceList p{
+    margin-left: 5px;
+}
+
+/* ********************* footer ******************************** */
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.container .logo_footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.logo_footer img{
+    margin-top: -50px;
+    width: 50px;
+    text-align: center;
+}
+
+.container .list_item{
+    width: 100%;
+    margin: 10px 0;
+}
+
+.list_item ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_item ul li{
+    list-style: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.list_item ul li a{
+    text-decoration: underline;
+    color: var(--sliver);
+}
+
+.list_item ul li a:hover{
+    color: #007BFF;
+}
+
+.footer_text{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer_text p{
+    font-size: 12px;
+}
+
+.typeCard{
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.typeCard img{
+    margin-top: 25px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 50px;
+}
+
+/* ********************* arrow scroll ******************************** */
+.arrowScroll{
+    width: 100%;
+    position: absolute;
+    visibility: hidden;
+    z-index: -100;
+}
+
+.activeScrollButton{
+    visibility: visible;
+    z-index: 100;
+}
+
+.arrowScroll i{
+    position: fixed;
+    bottom: 50px;
+    right: 0px;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #003399;
+    color: var(--white);
+    margin-right: 35px;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    animation: scrollButton 1s ease infinite;
+}
+
+@keyframes scrollButton{
+    0%{width: 35px;height: 35px;}
+    50%{width: 40px;height: 40px;}
+    100%{width: 35px;height: 35px;}
+}
+
+/* ********************* media query ******************************** */
+@media screen and (max-width : 950px){
+   header .navbar_List li a i{
+    display: none;
+  }
+
+  .flag_container.flag_box{
+    display: none;
+}
+
+header .navbar_List li a{
+    padding: 0 15px;
+   }
+
+   /* flight card price list  */
+   .card_troustFlex{
+    flex: 1 1 230px;
+    margin: 5px;
+  }
+  
+  .card_troustFlex img{
+      width: 100%;
+ }
+}
+
+@media screen and (max-width : 768px){
+    header .bars_icon{
+    display: block;
+    right: 15px;
+  }
+
+  .flag_container.flag_box{
+      width: 100%;
+      top: 20%;
+      height: 200px;
+      left: 0;
+    display: block;
+}
+
+.myAccount{
+    top: 150px;
+    width: 100%;
+    height: 200px;
+}
+
+  header nav{
+      display: none;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      min-height: 100%;
+      background-color: #003399;
+      color: white;
+      transition: 0.5s ease-in-out;
+  }
+
+  header nav.active{
+      display: block;
+      transition: 0.5s ease;
+  }
+
+  header nav .navbar_List{
+      display: block;
+      margin: 0 0;
+      padding: 15px 0;
+      text-align: center;
+      border-top: 1px solid rgb(255,255,255);
+  }
+
+  header .navbar_List li a i{
+    display: inline;
+    font-size: 1.50rem;
+    padding: 0 10px;
+    text-align: center;
+    color: white;
+  }
+
+  /* pop  */
+   .flag_pop_box .flag_pop_form{
+    width: 65%;
+  }
+
+  .flag_pop_box i{
+    right: 25px;
+  }
+
+  /* alert pop my accound  */
+ .container_pop_section .container_flex_pop{
+    width: 65%;
+  }
+}
+
+@media screen and (max-width : 576px){
+  .list_item ul li{
+    margin: 0 5px;
+  }
+
+ /* pop  */
+   .flag_pop_box .flag_pop_form{
+    width: 85%;
+  }
+
+  .flag_pop_box i{
+      top: -50px;
+    right: 10px;
+   }
+
+   /* alert pop my accound  */
+ .container_pop_section .container_flex_pop{
+    width: 90%;
+     padding: 21.50px 5px;
+  }
+
+  .pop_icon_show i{
+    top: 5px;
+    right: 14.50px;
+  }
+
+  .container_icon_pop .button_group_pop{
+    margin: 0 5px;
+  }
+
+ .list_item ul li{
+    margin: 0 5px;
+  }
+
+  /* form flight section  */
+  .getwaySection{
+    padding: 10px 5px;
+  }
+
+  .containerBook{
+    width: 90%;
+    margin: -45px auto 20px auto;
+    padding: 15px 35px;
+ }
+
+ .containerBook i{
+    top: 0%;
+  }
+
+  .cardToursitPlace{
+    width: 100%;
+ }
+
+ /* footer image  */
+
+ .typeCard img{
+    width: 250px;
+ }
+
+ .footer_text{
+    width: 95%;
+ }
+}

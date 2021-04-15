@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- favbicon  -->
+    <link rel="favb icon" href="image/favbicon.png.png">
+    <!-- media queery  -->
+    <link rel="stylesheet" href="style_Css_Javascript/mediaQuery.css">
+    <!-- css  -->
+    <link rel="stylesheet" href="style_Css_Javascript/index1.css">
+    <!-- javascript  -->
+    <script defer src="style_Css_Javascript/index1.js"></script>
+    <title>General terms and conditions</title>
+</head>
+<body onload="imgSliderList()">
+
+    <header>
+        <div class="logo">
+                <img src="image/favbicon.png.png" alt="">
+            </div>
+        <nav>
+            <ul class="navbar_List">
+                <li><a href="index.html" target="_Blank"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="index4.html" target="_Blank"><i class="fa fa-plane"></i> Flights</a></li>
+                <li><a href="index5.html" target="_Blank"><i class="fa fa-bed"></i> Hotels</a></li>
+                <li><a href="index6.html" target="_Blank"><i class="fa fa-car"></i> Car rental</a></li>
+                <li id="flag_btn"><a href="#"><img src="image/india.png.png" alt=""> EN | RUP <i class="fa fa-angle-down"></i></a>
+            </li>
+                <li id="myAccount"><a href="#"><i class="fa fa-user-circle-o"></i> My Account</a></li>
+            </ul>
+        </nav>
+        <div class="bars_icon" id="toggleIcon">
+                <div class="bars_line"></div>
+                <div class="bars_line"></div>
+                <div class="bars_line"></div>
+            </div>
+    </header> 
+
+    <main>
+                <!-- country flag and money symble  -->
+        <!-- country flag and money symble  -->
+        <section>
+            <div class="flag_container" id="flag_Container">
+            <ul>
+                <div class="iconClose" id="iconClose"></div>
+                <li class="oneAlertPopContainer" class="indiaPopcard"><a href="#"><img src="image/animated-india.gif.gif" alt="">Ruppe (₹)</a></li>
+                <li class="oneAlertPopContainer"><a href="#" style="font-size: 10px;"><img src="image/usa.gif.gif" alt="">United States ($)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/germany.gif.gif" alt="">Deutschland (€)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/italy.gif.gif" alt="">Italy (€)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/bangladesh.gif.gif" alt="">taka (৳)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/nepal.gif.gif" alt="">Ruppe (रु)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/russian.gif.gif" alt="">Ruble (₽)</a></li>
+            </ul>
+           </div>
+        </section>
+
+        <!-- flag alert pop box  -->
+           <section class="overflowPop" id="popAlertBoxShow">
+               <div class="flag_pop_box">
+                   <i class="fa fa-times" id="popAlertClose"></i>
+                   <div class="flag_pop_form form-group">
+                       <form action="" id="submitForm">
+                           <input type="text" class="form-control mb-3" id="popInput" required placeholder="Enter Your name">
+                           <select name="" class="form-control mb-" id="popSelect" required>
+                               <option value="The Taj Mahal, Agra">The Taj Mahal, Agra</option>
+                               <option value="Florence Duomo Santa Maria del Fiore">Florence Duomo Santa Maria del Fiore</option>
+                               <option value="The Grand Canal in Venice">The Grand Canal in Venice</option>
+                               <option value="Berlin's Brandenburg Gate">Berlin's Brandenburg Gate</option>
+                               <option value="Bangladesh National Museum">Bangladesh National Museum</option>
+                               <option value="Helambu Trek">Helambu Trek</option>
+                               <option value="Mecca Masjid, Hyderabad">Mecca Masjid, Hyderabad</option>
+                               <option value="Amer Fort, Jaipur">Amer Fort, Jaipur</option>
+                               <option value="Moscow">Moscow</option>
+                               <option value="Periyar National Park and Wildlife Sanctuary, Madurai">Periyar National Park and Wildlife Sanctuary, Madurai</option>
+                           </select>
+                           <button class="btn btn-primary form-control mt-3">Log in</button>
+                           <hr>
+                       </form>
+                       <div class="flag_pop_img_box">
+                           <h6 class="text-center" id="nameCountry">India Location</h6>
+                               <img src="image/popImg/taj-mahal.jpg.jpg" id="countryImg" class="img-thumbnail" alt="">
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+        <!-- my account details and loging -->
+        <section>
+            <div class="myAccount" id="myAccountPop">
+                    <i class="fa fa-times timesIcon"></i>
+                <button class="btn" id="myAccoundLogin">Log in</button>
+                <div class="logIn_new">
+                    <label for="account">No account yet?</label>
+                    <span><a href="#" id="createItKnow">Create it now</a></span>
+                </div>
+                <hr>
+                <button class="btn btnBook">Find my booking as a guest</button>
+            </div>
+        </section>
+
+        <!-- General terms and conditions -->
+        <section>
+            <div class="toggle_heading">
+                <h1>Terms and conditions: eDreams Prime</h1>
+            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                    <h1 class="privice_police_text">Summary: eDreams Prime</h1>
+                    <div class="order_List">
+                        <ol type="1">
+                        <a href="#benefits"><li><span>1.</span> Benefits</li></a>
+                        <a href="#Prime_customer"><li><span>2.</span> How to become an eDreams Prime Customer</li></a>
+                        <a href="#Payment"><li><span>3.</span> Term, Payment and Termination/Cancellation</li></a>
+                        <a href="#withreaw"><li><span>4.</span> Right to Withdraw</li></a>
+                        <a href="#dataProtection"><li><span>5.</span> Data Protection</li></a>
+                        <a href="#otherTerms"><li><span>6.</span> Other Terms</li></a>
+                    </ol>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md-8 col-sm-8">
+                    <div class="privice_police">
+                    <p>
+                        Effective as of 23 March 2021. <br>
+                        Please read these Terms and Conditions (“T&Cs”) before purchasing eDreams Prime. <br>
+                        When purchasing eDreams Prime, you agree to accept these T&Cs.
+                        The provider of eDreams Prime is: <br>
+                        Vacaciones eDreams SL duly incorporated in Spain and registered in the Trade Registry of Madrid with registered office is at Calle Conde de Peñalver, 5, - 1º Ext. Izq., 28006, Madrid, Spain (“us” or “we”).
+                        Please be aware that the terms and conditions for the purchase of your product are different than these T&Cs. The terms and conditions of your product of choice are available at our website at https://www.edreams.com (hereinafter “Website”). They will be brought to your attention before you finalize your booking. <br>
+                        Your correspondence address in connection with this service is:
+                        Vacaciones eDreams SL, address for correspondence purposes, Carrer de Bailén, 67-69, 08009, Barcelona, Spain or through our online Help Centre. If you would prefer to contact us by telephone please use the Prime Line (defined in Article 1).
+                    </p>
+                    <h1 id="benefits">1. Benefits</h1>
+                    <p>
+                        eDreams Prime allows you to benefit from a preferential total price, all costs included (“eDreams Prime”). These price conditions (“Prime Fare/Fares”) apply to Prime customers on bookings made on the Website and/or through our mobile application eDreams (hereafter collectively the “Application”). eDreams Prime is available to all persons identified in the booking (provided that you are also a part of the booking and that you are logged in to your User Account (defined in Article 2). <br>
+                        Please note: We reserve the right to apply or disapply the Prime Fare to airlines and railway companies from time to time and at any time, and particularly in the case of any airlines/railway companies where an order is made for its winding up, administration or dissolution, where it threatens to cease to carry on business, where it threatens insolvency or become insolvent, or any event that may be analogous to such circumstances.For the avoidance of doubt, eDreams Prime will: (i) allow you to get Prime Fares for the products that during the purchase of eDreams Prime on the Application were clearly indicated in the list of included advantages that may be some or all of the following: flight, car, hotel and train bookings individually or collectively (i.e. dynamic packaging) searched; (ii) apply to services not expressly indicated in these T&Cs/Confirmation Email (as defined in Article 2)/purchase of your eDreams Prime. <br>
+                        eDreams Prime also allows you to access additional benefits. The additional benefits currently available are the following: <br>
+                        Exclusive Prime customer service: priority phone number (“Prime Line”) which shall be available only to Prime customers, the details of which will be sent to you in your Confirmation Email when you once become an eDreams Prime customer. <br>
+                        We reserve the right to modify/update/extend the list of available additional benefits at any time and for any reason.
+                    </p>
+                    <h1 id="Prime_customer">2. How to become an eDreams Prime customer</h1>
+                    <p>
+                        eDreams Prime is reserved for the use of individuals over 18 years old and is only for private and personal use, and cannot be used for business or professional purposes. Individuals acting in a business capacity as well as companies and/or legal entities are not allowed to purchase eDreams Prime or to benefit from it.
+                        We reserve the right to immediately terminate your eDreams Prime in case of non-compliance with these T&Cs.
+                        To purchase eDreams Prime, simply search and book a product on our Website or Application with the Prime Fare option selected. When conducting a search on our Website or Application, two fares will be displayed, the Prime Fare and the full fare. Selecting the Prime Fare and continuing to book that journey with that fare selected will result in offering to purchase a thirty (30) day free trial of eDreams Prime (the “Trial Period”) and availing of the Prime Fare as defined above. YOU WILL BE CHARGED YOUR PRIME FEE FOR THE RENEWAL TERM UPON THE EXPIRATION OF YOUR TRIAL PERIOD (terms as defined below).
+                        We will accept your purchase by sending a confirmation email (“Confirmation Email”) as of the date that you become an eDreams Prime customer(the “Effective Date”). As of the Effective Date, you are a Prime customer, and an account will automatically be created for you on the Website and/or Application (“User Account”) that allows you, when logged in, during the Prime Term (defined under Article 3), to make further bookings at the advantageous eDreams Prime conditions. You will need to set your password following the instructions on the Website/Application.Please note that after you have become an eDreams Prime customer, to continue using eDreams Prime and availing of the Prime Fares, you need to: (i) keep your User Account active (so you cannot cancel the User Account during the entire Prime Term); (ii) you must be logged in to your User Account during the booking; and (iii) be part of that reservation. If, after making the reservation, you can no longer travel for any reason and need to cancel or change your part of the reservation, the Prime Fare will no longer apply. In these circumstances, the difference between the Prime Fare and the price applicable to non-Prime customers at the date of changing the reservation will become due. YOU UNDERSTAND THAT THE CANCELLATION OF YOUR USER ACCOUNT DOES NOT ENTAIL THE CANCELLATION OR THE TERMINATION OF YOUREDREAMS PRIME AND THAT YOU ARE THE SOLE PERSON RESPONSIBLE FOR THE USE, PRESERVATION AND PRIVACY OF YOUR USER ACCOUNT AND CREDENTIALS.
+                        You warrant that all information supplied by you on the Website or Application is true, accurate, current and complete and agree to keep your personal information correct and accurate (email address, contact details, etc.) by updating your User Account and/or informing the customer service department of any changes to your personal information via the process described in the Help Centre.
+                        In the event that the eDreams Prime is offered elsewhere (for instance by email), please follow the instructions displayed to you.
+                        The benefits of eDreams Prime will be the same regardless of the channel that you choose to purchase eDreams Prime. The benefits of eDreams Prime can be redeemed by logging in to your User Account on the following channels: Website and the Application.
+                        We reserve the right, in our sole discretion, to change these T&Cs at any time. Updated versions of the T&Cs will be posted on the Website and on the relevant section of the Application and are effective immediately on posting. Please check frequently, especially before you use eDreams Prime, to see if these T&Cs changed. Use of eDreams Prime after any changes to the T&Cs constitutes your consent to the changes. For the avoidance of any doubt, the applicable T&Cs are those: (i) in force at the time of your purchase of eDreams Prime, and (ii) in the event of renewal of your Prime , the T&Cs in force at that date of your last renewal.
+                    </p>
+                    <h1 id="Payment">3. Term, Payment and Termination/Cancellation</h1>
+                    <p>
+                        Your eDreams Prime starts from the Effective Date and is valid initially for the Trial Period. You can cancel your free trial by contacting us as per the procedure below. <br>
+                        IF YOU DO NOT CANCEL YOUR EDREAMS PRIME BEFORE THE END OF THE TRIAL PERIOD, IT WILL AUTOMATICALLY RENEW AT THE END OF THE TRIAL PERIOD FOR AN ADDITIONAL PERIOD OF TWELVE (12) MONTHS (UNLESS TERMINATED BY US OR OTHERWISE INDICATED IN THESE T&Cs). <br>
+                        YOUR EDREAMS PRIME WILL CONTINUE TO RENEW AUTOMATICALLY AT END OF EACH RENEWAL TERM (“RENEWAL DATE”) FOR ADDITIONAL TWELVE MONTH TERMS UNLESS YOU CANCEL. Each twelve month renewal period (a “Renewal Term”) and the Trial Period are separately and together referred to as the “Prime Term”. <br>
+                        However, i In the case of certain promotions (for example, price reduction, etc.) you may have purchased an initial longer or shorter Prime Term (for instance, a Prime Term of 3 or 6 months, etc.). In those circumstances, you will become an eDreams Prime customer and may use eDreams Prime in accordance with the terms and conditions indicated in the promotion for that particular Prime Term. If you are unsure of the specific Prime Term that applies to you, your Confirmation Email will contain the relevant information, or you can contact us through our Help Centre or the Prime Line (details of which will be in the Confirmation Email). <br>
+                        EACH PARTY MAY CANCEL THE SUBSCRIPTION BY PROVIDING THE OTHER PARTY WITH NOTICE AT LEAST 72 HOURS PRIOR THE END OF THE RESPECTIVE PRIME TERM STATING THAT THEY WISH TO CANCEL YOUR EDREAMS PRIME OR THAT THEY DO NOT WISH FOR IT TO RENEW AUTOMATICALLY. YOU CAN PROVIDE US THIS NOTICE BY ACCESSING YOUR USER ACCOUNT AND FOLLOWING THE INSTRUCTIONS PROVIDED THERE. <br>
+                        The fee for your eDreams Prime (“Prime Fee”) is due and payable in advance of the start of any Prime Term which follows a Trial Period. IF YOU DO NOT CANCEL YOUR TRIAL PERIOD, YOUR PRIME FEE FOR THE RENEWAL TERM WILL BE DUE ON EXPIRY OF THE TRIAL PERIOD. <br>
+                        YOU UNDERSTAND THAT YOUR EDREAMS PRIME WILL AUTOMATICALLY RENEW AND YOU AUTHORIZE US (WITHOUT FURTHER NOTICE TO YOU UNLESS REQUIRED BY LAW) TO COLLECT THE PRIME FEE USING THE PAYMENT DETAILS REGISTERED TO YOUR ACCOUNT.
+                        Storage of your bank data: we will use the payment details that you provided at the time of your purchase of eDreams Prime and creation of your User Account unless agreed otherwise between you and us.
+                        You also agree that by purchasing eDreams Prime you accept that those payment details will also be used to collect the Prime Fee due for any subsequent Renewal Term. Should that payment method have expired on the Effective Date, we will ask you to provide up-to-date payment information in your User Account and/or if expired subsequently, ask you to enter up-to-date payment information in a dedicated renewal payment section of your User Account and/or, if applicable, we will apply those updated payment details provided to us in relation to any other booking that you have made during the Prime Term.
+                        This shall apply any Renewal Terms.
+                        PAYMENT DETAILS ENTERED MUST BELONG TO YOU. BY ENTERING THE PAYMENT DATA, YOU DECLARE THAT YOU HAVE THE RIGHT TO USE THEM AND ACCEPT SOLE RESPONSIBILITY FOR DOING SO.
+                        You will only be entitled to benefit from eDreams Prime during the Prime Term and as long as the Prime Fee has been paid. Within the Prime Term, eDreams Prime is valid for all bookings as defined under Article 1 that you make on our Website or Application.
+                        You can cancel eDreams Prime at any time during the Prime Term according to the instructions provided above. Note that the Prime Fee to eDreams Prime will not be refunded (except if you exercise your right to withdrawal as stated under Article 4).
+                        The Prime Fee shall be considered the payment for a voucher with a par value equal to the Prime Fee (the “Prime Voucher”). The Prime Voucher shall be redeemed by you during the Prime Term when you make a booking on our Website and Application. The Prime Voucher is redeemed against the service fee charged by us for the handling of your booking with a maximum of the par value of the Prime Voucher. Therefore, we will not issue an invoice for the Prime Fee charged until the Prime Voucher is actually redeemed by you. Any unused portion of the Prime Voucher shall expire and shall not be entitled for refund or exchange for any products or further purchases.
+                    </p>
+                    <h1 id="withreaw">4. Right to Withdraw</h1>
+                    <p>
+                        eDreams Prime becomes effective on the Effective Date as defined in Article 2 above. <br>
+                        You benefit from a withdrawal period of 14 days from the Effective Date without giving any reason (and is separate from your rights to cancel under Article 3). To meet the cancellation deadline, it is sufficient for you to communicate your decision to us by calling us on the Prime Line (details will be in your Confirmation Email) before the 14 day period has expired. <br>
+                        If during that 14 day period you wish to exercise your right of withdrawal, we will reimburse to you the relevantPrime Fee received from you, but we may make a deduction from the reimbursement if you have already enjoyed the benefit of eDreams Prime by your express agreement (i.e. by making a purchase with a Prime Fare). Such deduction shall correspond to the amount of any benefits provided by us up until we receive the communication of your decision to withdraw. Thus, any refund due following the exercise of your right of withdrawal will be impacted by any amount owed to us for benefits already received due to the execution of eDreams Prime, at your request. <br>
+                        The refund by eDreams Prime will be made no later than 14 days from the date on which you informed us of your decision to withdraw.
+                    </p>
+                    <h1 id="dataProtection">5. Data protection</h1>
+                    <p>
+                        In accordance with the applicable privacy regulations, all relevant <br>  information regarding data protection can be found in our Privacy Policy. <br>Please see our <span style="color: orange;">Privacy Policy</span> to understand how we collect and process 
+                        your personal information.
+                    </p>
+                    <h1 id="otherTerms">6. Other Terms</h1>
+                    <p>
+                        eDreams Prime is solely and exclusively for private use. If we detect commercial use or other misuse, (including, but not limited to, a number of bookings made in a one day period that we may consider to be suspicious or inconsistent with mere personal use), or where a third party is erroneously usingeDreams Prime for fraudulent purposes, we reserve the right at any moment and without any prior notice to (i) verify private use of eDreams Prime (ii) to deny access to your User Account (iii) terminate your eDreams Prime (or subsequent renewal) , (iv) to demand the refund of unduly acquired advantages. <br>
+                        You agree to use and benefit from eDreams Prime in good faith and to inform us of any change or information that might interfere with eDreams Prime or its benefits. <br>
+                        By purchasing eDreams Prime, you undertake to use it in compliance with the terms of the present T&Cs as well as all applicable laws. <br>
+                        You undertake to use eDreams Prime in accordance with the present T&Cs and, in particular, to not use eDreams Prime in an abusive or fraudulent way. You are expressly prohibited from assigning the benefit of eDreams Prime to a third party, using it in a commercial way, or using the identity of another user or using a User Account which do not belong to you. <br>
+                        EDREAMS PRIME AND OTHER FEATURES OF THE WEBSITE AND APPLICATION ARE PROVIDED “AS IS” AND WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF ACCURACY, RELIABILITY, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT ANY SUCH FEATURES WILL OPERATE UNINTERRUPTED OR IN AN ERROR-FREE FASHION, THAT DEFECTS WILL BE CORRECTED, OR THAT THE WEBSITE OR THE APPLICATION OR THE SERVER ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS. APPLICABLE LAW MAY NOT ALLOW EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. Applicable Law: the laws of Spain shall govern these T&Cs, as well as any relationship between you and us. You hereby consent to the exclusive jurisdiction and venue of the Spanish courts in all disputes arising out of or relating to the use of the eDreams Prime, Website’s desktop, Website’s mobile web and the Application. However, if you are a person using eDreams Prime for a purpose, which can be regarded as being outside your trade or profession (i.e. consumer), you will additionally enjoy the protection afforded to you by the mandatory provisions of consumer laws of the country of your habitual residence which cannot be derogated from by agreement under that law.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+
+        <!-- my account pop box  -->
+        <section class="form_pop_container_display">
+            <div class="container_pop_section" id="pop_form_card">
+                <div class="pop_icon_show" id="popAlertForm">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="container_flex_pop">
+                    <div class="login_name">
+                        <h1>Log in</h1>
+                        <hr>
+                    </div>
+                    <div class="container_icon_pop">
+                        <div class="button_group_pop">
+                            <span><i class="fa fa-facebook"></i></span>
+                            <button> Facebook</button>
+                        </div>
+                        <div class="button_group_pop">
+                            <span><img src="image/google-symbol.png.png" alt=""></span>
+                            <button> Google</button>
+                        </div>
+                    </div>
+                    <div class="container_text_pop">
+                        <p><i class="fa fa-lock"></i> We never share anything without your permission</p>
+                    </div>
+                    <hr>
+                    <div class="form-group form_group_pop">
+                        <form action="">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="password" name="" id="" class="form-control" placeholder="Password" required>
+                            <a href="#" class="forgotPassword" id="forgotPassword">Forgot your password?</a>
+                            <button class="btn form-control">Log In</button>
+                            <div class="border_bottm_dotted"></div>
+                            <span>No account yet? <a href="#" id="logInId1">Sign up for free</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- my account pop box part 2  -->
+        <section class="form_pop_container_display">
+            <div class="container_pop_section" id="pop_form_card1">
+                <div class="pop_icon_show" id="popAlertForm1">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="container_flex_pop">
+                    <div class="login_name">
+                        <h1>Reset your password</h1>
+                        <hr>
+                    </div>
+                    <div class="container_text_pop">
+                        <p><i class="fa fa-lock"></i> Enter your email and we'll send you the instructions to recover your password:</p>
+                    </div>
+                    <hr>
+                    <div class="form-group form_group_pop">
+                        <form action="">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <button class="btn form-control">Log In</button>
+                            <div class="border_bottm_dotted"></div>
+                            <a href="#" id="returnButton"><i class="fa fa-angle-left"></i> Return to Log in</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- my account pop box 2  -->
+        <section class="form_pop_container_display">
+            <div class="container_pop_section" id="pop_form_card2">
+                <div class="pop_icon_show" id="popAlertForm2">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="container_flex_pop">
+                    <div class="login_name">
+                        <h1>Log in</h1>
+                        <hr>
+                    </div>
+                    <div class="container_icon_pop">
+                        <div class="button_group_pop">
+                            <span><i class="fa fa-facebook"></i></span>
+                            <button> Facebook</button>
+                        </div>
+                        <div class="button_group_pop">
+                            <span><img src="image/google-symbol.png.png" alt=""></span>
+                            <button> Google</button>
+                        </div>
+                    </div>
+                    <div class="container_text_pop">
+                        <p><i class="fa fa-lock"></i> We never share anything without your permission</p>
+                    </div>
+                    <hr>
+                    <div class="form-group form_group_pop">
+                        <form action="">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="password" name="" id="" class="form-control" placeholder="Password" required>
+                            <p class="forgotPassword1">By clicking on "Create your account" I accept the Privacy Policy and the General terms and conditions of eDreams</p>
+                            <button class="btn form-control">Create New Account</button>
+                            <div class="border_bottm_dotted"></div>
+                            <span>No account yet? <a href="#" id="newSignUp">Sign up for free</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <a href="#" class="arrowScroll" id="scrollButton"><i class="fa fa-angle-up"></i></a>
+
+<footer>
+        <div class="container">
+            <div class="logo_footer">
+                <img src="image/favbicon.png.png" alt="">
+            </div>
+            <div class="list_item">
+                <ul>
+                    <li><a href="index1.html" target="_Blank">General terms and conditions</a></li>
+                    <li><a href="index2.html" target="_Blank">| Cookies policy |</a></li>
+                    <li><a href="index3.html" target="_Blank">Privacy policy</a></li>
+                </ul>
+                <div class="footer_text">
+                    <p>* Flight comparison carried out using basic fare (excluding ancillaries) for the same flight number. Monthly benchmark of 20,000 flights compared on average.
+                    *Hotel comparison carried out using basic fare for the same room type and same travel dates. Hotels in top 25 destinations and top 20 search results.
+                    Lowest price 9 out of 10 times on average for both flights and hotels.
+                    © 2021 - Come As We Travel. All rights reserved. Vacaciones Come As We Travel, S.L. (Sociedad Unipersonal). Registered address (not open to the public): c/ Conde de Peñalver, 5, 1º Ext.Izq, 28006 Madrid, Spain . Registered with the Registro Mercantil de Madrid, Tomo 36897, Folio 121, Hoja M-660117. Licensed Travel Agency CICMA 3682 and IATA-accredited agent. Customer care: use our Help Center. To contact us about your booking, you can do so immediately via our help centre, or by writing to Vacaciones Come As We Travel, S.L., Carrer de Bailèn 67-69, 08009 Barcelona, Spain.</p>
+                </div>
+                <div class="typeCard">
+                    <img src="image/slider/all-cards.png.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

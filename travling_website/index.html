@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- icon  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- sweet alert  -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- favbicon  -->
+    <link rel="favb icon" href="image/favbicon.png.png">
+    <!-- media queery  -->
+    <link rel="stylesheet" href="style_Css_Javascript/mediaQuery.css">
+    <!-- css  -->
+    <link rel="stylesheet" href="style_Css_Javascript/index.css">
+    <!-- javascript  -->
+    <script defer src="style_Css_Javascript/index.js"></script>
+    <title>come As we travel</title>
+</head>
+<body onload="imgSliderList()">
+
+    <header>
+        <div class="logo">
+                <img src="image/favbicon.png.png" alt="">
+            </div>
+        <nav>
+            <ul class="navbar_List">
+                <li><a href="index.html" target="_Blank"><i class="fa fa-home"></i> Home</a></li>
+                <li><a href="index4.html" target="_Blank"><i class="fa fa-plane"></i> Flights</a></li>
+                <li><a href="index5.html" target="_Blank"><i class="fa fa-bed"></i> Hotels</a></li>
+                <li><a href="index6.html" target="_Blank"><i class="fa fa-car"></i> Car rental</a></li>
+                <li id="flag_btn"><a href="#"><img src="image/india.png.png" alt=""> EN | RUP <i class="fa fa-angle-down"></i></a>
+            </li>
+                <li id="myAccount"><a href="#"><i class="fa fa-user-circle-o"></i> My Account</a></li>
+            </ul>
+        </nav>
+        <div class="bars_icon" id="toggleIcon">
+                <div class="bars_line"></div>
+                <div class="bars_line"></div>
+                <div class="bars_line"></div>
+            </div>
+    </header> 
+
+    <main>
+        <!-- country flag and money symble  -->
+        <section>
+            <div class="flag_container" id="flag_Container">
+            <ul>
+                <div class="iconClose" id="iconClose"></div>
+                <li class="oneAlertPopContainer" class="indiaPopcard"><a href="#"><img src="image/animated-india.gif.gif" alt="">Ruppe (₹)</a></li>
+                <li class="oneAlertPopContainer"><a href="#" style="font-size: 10px;"><img src="image/usa.gif.gif" alt="">United States ($)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/germany.gif.gif" alt="">Deutschland (€)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/italy.gif.gif" alt="">Italy (€)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/bangladesh.gif.gif" alt="">taka (৳)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/nepal.gif.gif" alt="">Ruppe (रु)</a></li>
+                <li class="oneAlertPopContainer"><a href="#"><img src="image/russian.gif.gif" alt="">Ruble (₽)</a></li>
+            </ul>
+           </div>
+        </section>
+
+        <!-- flag alert pop box  -->
+           <section class="overflowPop" id="popAlertBoxShow">
+               <div class="flag_pop_box">
+                   <i class="fa fa-times" id="popAlertClose"></i>
+                   <div class="flag_pop_form form-group">
+                       <form action="" id="submitForm">
+                           <input type="text" class="form-control mb-3" id="popInput" required placeholder="Enter Your name">
+                           <select name="" class="form-control mb-" id="popSelect" required>
+                               <option value="The Taj Mahal, Agra">The Taj Mahal, Agra</option>
+                               <option value="Florence Duomo Santa Maria del Fiore">Florence Duomo Santa Maria del Fiore</option>
+                               <option value="The Grand Canal in Venice">The Grand Canal in Venice</option>
+                               <option value="Berlin's Brandenburg Gate">Berlin's Brandenburg Gate</option>
+                               <option value="Bangladesh National Museum">Bangladesh National Museum</option>
+                               <option value="Helambu Trek">Helambu Trek</option>
+                               <option value="Mecca Masjid, Hyderabad">Mecca Masjid, Hyderabad</option>
+                               <option value="Amer Fort, Jaipur">Amer Fort, Jaipur</option>
+                               <option value="Moscow">Moscow</option>
+                               <option value="Periyar National Park and Wildlife Sanctuary, Madurai">Periyar National Park and Wildlife Sanctuary, Madurai</option>
+                           </select>
+                           <button class="btn btn-primary form-control mt-3">Log in</button>
+                           <hr>
+                       </form>
+                       <div class="flag_pop_img_box">
+                           <h6 class="text-center" id="nameCountry">India Location</h6>
+                               <img src="image/popImg/taj-mahal.jpg.jpg" id="countryImg" class="img-thumbnail" alt="">
+                       </div>
+                   </div>
+               </div>
+           </section>
+
+        <!-- my account details and loging -->
+        <section>
+            <div class="myAccount" id="myAccountPop">
+                    <i class="fa fa-times timesIcon"></i>
+                <button class="btn" id="myAccoundLogin">Log in</button>
+                <div class="logIn_new">
+                    <label for="account">No account yet?</label>
+                    <span><a href="#" id="createItKnow">Create it now</a></span>
+                </div>
+                <hr>
+                <button class="btn btnBook">Find my booking as a guest</button>
+            </div>
+        </section>
+
+        <!-- slider Image with content and text  -->
+        <section>
+            <div class="slider_div" id="sliderDiv">
+                <div class="overflowy"></div>
+                <div class="img_Slider">
+                    <img id="sliderImg" src="image/slider/sliderOne.jpg.jpg" alt="">
+                </div>
+                <div class="tour_form">
+                    <h1>Search. Book. Travel.</h1>
+                    <div class="button_List">
+                        <button class="btn btnPop" id="planeBtn"><i class="fa fa-plane"> <spane>Flights</spane></i></button>
+                        <button class="btn btnPop" id="bedBtn"><i class="fa fa-bed"> <spane>Hotels</spane></i></button>
+                        <button class="btn btnPop" id="palneandbed"><i class="fa fa-plane"></i><i class="fa fa-bed"></i> <spane>Hotel + Filght</spane></button>
+                        <button class="btn btnPop" id="carBtn"><i class="fa fa-car"> <spane>Car</spane></i></button>
+                    </div>
+                    <div class="form_contaner">
+                        <form action="" id="formDisplay1">
+                            <label for="return"><input class="ml-2" type="radio" name="categary" id="return"> Return </label>
+                            <label for="One way"><input class="ml-2" type="radio" name="categary" id="One way"> One way </label>
+                            <label for="Multi city"><input class="ml-2" type="radio" name="categary" id="Multi city"> Multi city </label> |
+                            <select name="" id="" class="selectCatgry">
+                                <option value="Economy">Economy</option>
+                                <option value="premium economy">premium economy</option>
+                                <option value="Business">Business</option>
+                                <option value="First">First</option>
+                            </select>
+                            <label for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                Direct flights only
+                            </label>
+                            <div class="form_input">
+                                <input type="text" placeholder="Where from" required>
+                                <input type="text" placeholder="Where to " required>
+                                <input type="date" placeholder="Departure" required>
+                                <input type="date" placeholder="Return" required>
+                                <select name="" id="" class="select">
+                                    <option>travellers <i class="fa fa-angel-down"></i></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <div class="button_right">
+                                    <button class="btn searchBtn">Search flight + hotel</button>
+                                    <button class="btn">Search flight</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- next form  -->
+                        <form action="" class="form-group form_next" id="formDisplay2" style="display: none;">
+                            <select name="" id="" class="form-control">
+                                <option value="Sri Lanka – Lush Greenery & Scenic Beaches">Sri Lanka – Lush Greenery & Scenic Beaches</option>
+                                <option value="Germany – Postcard-Perfect">Germany – Postcard-Perfect</option>
+                                <option value="Zimbabwe – Hidden Gem">Zimbabwe – Hidden Gem</option>
+                                <option value="Panama – Picturesque Coastline">Panama – Picturesque Coastline</option>
+                                <option value="Kyrgyzstan – Semi-Nomadic Experience">Kyrgyzstan – Semi-Nomadic Experience</option>
+                                <option value="Open Up To New Experiences">Open Up To New Experiences</option>
+                                <option value="Indonesia – Most Beautiful Of All">Indonesia – Most Beautiful Of All</option>
+                                <option value="Belarus – Europe’s Most Trending">Belarus – Europe’s Most Trending</option>
+                                <option value="Sao Tome & Principe – Paradise Far Away">Sao Tome & Principe – Paradise Far Away</option>
+                                <option value="Belize – Gateway To Mayan Culture">Belize – Gateway To Mayan Culture</option>
+                                <option value="Egypt – Desert Safari">Egypt – Desert Safari</option>
+                                <option value="India – Spirituality & Adventure">India – Spirituality & Adventure</option>
+                                <option value="Oman – An Arabian Gem">Oman – An Arabian Gem</option>
+                                <option value="New Zealand – Overwhelming Landscapes">New Zealand – Overwhelming Landscapes</option>
+                                <option value="Croatia – Treasure-trove of Experiences">Croatia – Treasure-trove of Experiences</option>
+                                <option value="Bhutan – World’s Happiest Country">Bhutan – World’s Happiest Country</option>
+                                <option value="Mexico – Architectural Wonder">Mexico – Architectural Wonder</option>
+                                <option value="Spain – Vibrant Culture">Spain – Vibrant Culture</option>
+                                <option value="Ethiopia – Horn of Africa">Ethiopia – Horn of Africa</option>
+                                <option value="Barazil – Live On The Edge">Barazil – Live On The Edge</option>
+                            </select>
+                            <div class="container-fluid">
+                                <div class="row mt-4">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row">
+                                        <div class="columnLg">
+                                            <label for="room">Rooms</label>
+                                            <select name="" id="room" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                                <option value="32">32</option>
+                                                <option value="33">33</option>
+                                                <option value="34">34</option>
+                                                <option value="35">35</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="columnLg">
+                                            <label for="Adults">Adults</label>
+                                            <select name="" id="Adults" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                                <option value="11">11</option>
+                                                <option value="12">12</option>
+                                                <option value="13">13</option>
+                                                <option value="14">14</option>
+                                                <option value="15">15</option>
+                                                <option value="16">16</option>
+                                                <option value="17">17</option>
+                                                <option value="18">18</option>
+                                                <option value="19">19</option>
+                                                <option value="20">20</option>
+                                                <option value="21">21</option>
+                                                <option value="22">22</option>
+                                                <option value="23">23</option>
+                                                <option value="24">24</option>
+                                                <option value="25">25</option>
+                                                <option value="26">26</option>
+                                                <option value="27">27</option>
+                                                <option value="28">28</option>
+                                                <option value="29">29</option>
+                                                <option value="30">30</option>
+                                                <option value="31">31</option>
+                                                <option value="32">32</option>
+                                                <option value="33">33</option>
+                                                <option value="34">34</option>
+                                                <option value="35">35</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="columnLg">
+                                            <label for="Children">Children</label>
+                                            <select name="" id="Children" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                        </div>
+                                        <div class="columnLg">
+                                          <button class="btn">Search flight</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- next form  -->
+                        <form action="" id="formDisplay3">
+                            <div class="form_input">
+                                <input type="text" placeholder="Where from" required>
+                                <input type="text" placeholder="Where to " required>
+                                <input type="date" placeholder="Departure" required>
+                                <input type="date" placeholder="Return" required>
+                                <select name="" id="" class="select">
+                                    <option>travellers <i class="fa fa-angel-down"></i></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                                <div class="button_right">
+                                    <button class="btn searchBtn">Search flight + hotel</button>
+                                    <button class="btn">Search flight</button>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- next  -->
+                        <form action="" id="formDisplay4">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Pick up" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-lg-6 col-md-6 col-sm-6">
+                                        <input type="date" class="form-control" required>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <input type="date" class="form-control" required>
+                                </div>
+                                </div>
+
+                                <div class="row form-group" style="display: flex; justify-content: space-between;">
+                                    <div class="col-lg-5 col-md-5 col-sm-6">
+                                        <div class="popBoxModel"></div>
+                                        <div style="display: flex; justify-content: space-between; align-items: center; margin: 10px 0;">
+                                            <span>Driver's age: <i class="fa fa-info"></i></span>
+                                        <span><input type="tel" class="form-control" name="" id="" placeholder="20" style="width: 50px;" required></span>
+                                        <span><input type="tel" class="form-control hover" name="" disabled placeholder="30" id="" style="width: 50px;"></span>
+                                        <span><input type="tel" class="form-control" name="" id="" placeholder="50" style="width: 50px;" required></span>
+                                        </div>
+                                </div>
+
+                                <div class="col-lg-6 col-md-6 col-sm-6">
+                                    <button class="btn form-control car_btn">Search car</button>
+                                </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div> 
+                </div>
+            </div>
+        </section>
+        <!-- Book your holidays and find travel offers -->
+        <section>
+            <div class="bookHolidays">
+                <h1 style="font-size: 1.50rem; font-weight: bold;">Book your holidays and find travel offers</h1>
+                <div class="bookholiday">
+                        <div class="iconBook">
+                            <i class="fa fa-check"></i>
+                            <span>More flight combinations than anyone else</span>
+                        </div>
+                        <div class="iconBook">
+                            <i class="fa fa-check"></i>
+                            <span>Free rebooking on many flights</span>
+                        </div>
+                        <div class="iconBook">
+                            <i class="fa fa-check"></i>
+                            <span>We compare millions of hotels and accommodation</span>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- input form with email  -->
+        <section>
+            <div class="container-fluid bg-primary">
+            <div class="row emailInputForm">
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="emailIcon">
+                        <i class="fa fa-envelope-o"></i>
+                        <span>Be the first to receive:</span>
+                        <div class="emailTextDisplay">
+                            <div class="emailText">
+                            <span><i class="fa fa-check"></i>Travel discounts</span>
+                        </div>
+                        <div class="emailText">
+                            <span><i class="fa fa-check"></i>Voucher codesExclusive</span>
+                        </div>
+                        <div class="emailText">
+                            <span><i class="fa fa-check"></i>Exclusive deals</span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12">
+                    <div class="inputEmail">
+                        <form action="" class="input-group">
+                            <input type="email" name="" id="" class="form-control" placeholder="Please enter email address" required>
+                        <button class="btn input-group-prepend">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- card flight  -->
+        <section>
+            <div class="card_gallery">
+                <div class="card_box">
+                    <div class="card_icon"><span id="plane_FlightBtn"><i class="fa fa-plane"></i> Flights</span></div>
+                    <div class="card_icon"><span id="clock_FlightBtn"><i class="fa fa-clock-o"></i> Traveller's Guide</span></div>
+                </div>
+            </div>
+        </section>
+        <!-- Our best flight deals! -->
+        <section>
+            <div class="card_flights" id="card_flights1">
+                <h2>Our best flight deals!</h2>
+                <div class="card_flights_box">
+                    <div class="card_flight_flex">
+                        <a href="https://www.fabhotels.com/blog/commercial-street-bangalore/" target="_Blank">
+                            <img src="image/slider/sliderSeven.jpg.jpg" alt="This is image here" title="Discounts on 100% of flights" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p>Discounts on 100% of flights</p>
+                        <h5 class="heading">Discover Prime</h5>
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card_flight_flex">
+                        <a href="https://www.tourradar.com/t/113570#p=1_" target="_Blank">
+                            <img src="image/slider/sliderThree.jpg.jpg" alt="This is image here" title="Rent your car with free cancellation" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p>Rent your car with free cancellation</p>
+                        <h5 class="heading">Book Know</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods" target="_Blank">
+                        <img src="image/slider/sliderTwo.jpg.jpg" alt="This is image here" title="Book your hotel with free cancellation" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p>Book your hotel with free cancellation</p>
+                        <h5 class="heading">Book Know</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.gotokyo.org/en/story/guide/december/index.html" target="_Blank">
+                        <img src="image/slider/sliderFive.jpg.jpg" alt="This is image here" title="This is a off flight" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Get €10* off your flight</b></p>
+                        <h5 class="heading">Download</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our best flight deals! -->
+        <section>
+            <div class="card_flights" id="card_flights2"> 
+                <div class="card_flights_box">
+                    <div class="card_flight_flex">
+                        <a href="https://www.fabhotels.com/blog/commercial-street-bangalore/" target="_Blank">
+                            <img src="image/slider/sliderFour.jpg.jpg" alt="This is image here" title="Discounts on 100% of flights" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p>Discounts on 100% of flights</p>
+                        <h5 class="heading">Discover</h5>
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card_flight_flex">
+                        <a href="https://www.tourradar.com/t/113570#p=1_" target="_Blank">
+                            <img src="image/slider/sliderOne.jpg.jpg" alt="This is image here" title="Rent your car with free cancellation" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p>Rent your car with free cancellation</p>
+                        <h5 class="heading">Click Here</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods" target="_Blank">
+                        <img src="image/slider/sliderSix.jpg.jpg" alt="This is image here" title="Book your hotel with free cancellation" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p>Book your hotel with free cancellation</p>
+                        <h5 class="heading">Know More</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.gotokyo.org/en/story/guide/december/index.html" target="_Blank">
+                        <img src="image/slider/sliderEight.jpg.jpg" alt="This is image here" title="Get €10* off your flight" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Get €10* off your flight</b></p>
+                        <h5 class="heading">Download</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Our best flight deals! -->
+        <section>
+            <div class="card_flights" id="card_flights3">
+                <h2>Plan your ideal holiday</h2>
+                <div class="card_flights_box">
+                    <div class="card_flight_flex">
+                        <a href="https://www.fabhotels.com/blog/commercial-street-bangalore/" target="_Blank">
+                            <img src="image/slider/sliderNine.jpg.jpg" alt="This is image here" title="Plan the perfect UK holiday" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>London Calling</b></p>
+                        <p>Plan the perfect UK holiday</p>
+                        <h5 class="heading">Click Here!</h5>
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card_flight_flex">
+                        <a href="https://www.tourradar.com/t/113570#p=1_" target="_Blank">
+                            <img src="image/slider/sliderTen.jpg.jpg" alt="This is image here" title="Unwind in Ibiza" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Unwind in Ibiza</b></p>
+                        <p>Unwind in Ibiza</p>
+                        <h5 class="heading">Book Know</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods" target="_Blank">
+                        <img src="image/slider/sliderEleven.jpg.jpg" alt="This is image here" title="Rome, you'll want to!" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Rome, you'll want to!</b></p>
+                        <p>Visit Italy's, capital</p>
+                        <h5 class="heading">Reserve your flight</h5>
+                        </div>
+                        </a>
+                    </div>
+                    <div class="card_flight_flex">
+                        <a href="https://www.fabhotels.com/blog/commercial-street-bangalore/" target="_Blank">
+                            <img src="image/slider/sliderFour.jpg.jpg" alt="This is image here" title="Fall in love with Madrid" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Fall in love with Madrid</b></p>
+                        <p>Book a memorable holiday</p>
+                        <h5 class="heading">Click here</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our best flight deals! -->
+        <section>
+            <div class="card_flights" id="card_flights4">
+                <div class="card_flights_box">
+                    <div class="card_flight_flex">
+                        <a href="https://www.gotokyo.org/en/story/guide/december/index.html" target="_Blank">
+                        <img src="image/slider/sliderTwalay.jpg.jpg" alt="This is image here" title="Ultimate beach guide" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Ultimate beach guide</b></p>
+                        <p>Visit the sunny Canary Islands</p>
+                        <h5 class="heading">Check it out</h5>
+                        </div>
+                        </a>
+                    </div>
+                    
+                    <div class="card_flight_flex">
+                        <a href="https://www.tourradar.com/t/113570#p=1_" target="_Blank">
+                            <img src="image/slider/sliderOne.jpg.jpg" alt="This is image here" title="Are you looking for weekend breaks?" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Are you looking for weekend breaks?</b></p>
+                        <p>Maximize your next city break with Fly!</p>
+                        <h5 class="heading">Click Here</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.visitdubai.com/en/explore-dubai/dubai-neighbourhoods" target="_Blank">
+                        <img src="image/slider/sliderSix.jpg.jpg" alt="This is image here" title="Balearic Islands" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Balearic Islands</b></p>
+                        <p>Holiday at the best beachers</p>
+                        <h5 class="heading">Click to Book</h5>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="card_flight_flex">
+                        <a href="https://www.gotokyo.org/en/story/guide/december/index.html" target="_Blank">
+                        <img src="image/slider/sliderEight.jpg.jpg" alt="This is image here" title="Get €10* off your flight" class="img-thumbnail">
+                        <div class="card_flight_text">
+                        <p><b>Get €10* off your flight</b></p>
+                        <p>This is a azmaing Fly</p>
+                        <h5 class="heading">Download</h5>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The world's #1 rated travel app -->
+        <section>
+            <div class="textmonial_div">
+                <h5 class="headingTextmonial">The world's #1 rated travel app</h5>
+                <div class="textmonial_card">
+                    <div class="textmonial_flex">
+                        <i class="fa fa-rocket"></i>
+                        <h5>Does all the check-ins for you</h5>
+                        <p>Need to know if your hand luggage will fit on board? Scan your bag with your phone to check.</p>
+                    </div>
+
+                    <div class="textmonial_flex">
+                        <i class="fa fa-plane"></i>
+                        <h5>Track any flight live</h5>
+                        <p>Everything you need to know about any flight, world-wide, whether you're on it or not.</p>
+                    </div>
+
+                    <div class="textmonial_flex">
+                        <i class="fa fa-shield"></i>
+                        <h5>Track any flight live</h5>
+                        <p>Everything you need to know about any flight, world-wide, whether you're on it or not.</p>
+                    </div>
+                </div>
+            </div>
+           </section>
+           <!-- soceal icon  -->
+           <section>
+           <div class="social_icon">
+               <div class="social_icon_div">
+                   <div class="social_icon_list">
+                       <h1>Get exclusive deals on the Come As we Travel app!</h1>
+                       <p>Download the app for free and get the best discounts wherever you are!</p>
+                       <span><img src="image/slider/GooglePlay.png.png" alt="Google Play"></span>
+                       <span><img src="image/slider/AppStore.png.png" alt="App Store"></span>
+                   </div>
+
+                   <div class="social_icon_list">
+                       <h1>Follow us!</h1>
+                       <p>Stay tuned and access the latest deals and discounts with:
+                           Stay tuned and access the latest deals and discounts with:
+                       </p>
+                       <span><img class="social_Icon_Img" src="image/slider/facebook.png.png" alt="Google Play"></span>
+                       <span><img class="social_Icon_Img" src="image/slider/twitter.png.png" alt="Google Play"></span>
+                       <span><img class="social_Icon_Img" src="image/slider/pinterest.png.png" alt="Google Play"></span>
+                   </div>
+
+                   <div class="social_icon_list">
+                       <h1>Get ready for your next adventure!</h1>
+                       <p>Find travel inspiration and practical information about your next trip. Learn about the latest travel trends. Discover our <a href="#">travel blog.</a></p>
+                   </div>
+               </div>
+           </div>
+           <hr>
+           </section>
+
+           <!-- my account pop box  -->
+        <section class="form_pop_container_display">
+            <div class="container_pop_section" id="pop_form_card">
+                <div class="pop_icon_show" id="popAlertForm">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="container_flex_pop">
+                    <div class="login_name">
+                        <h1>Log in</h1>
+                        <hr>
+                    </div>
+                    <div class="container_icon_pop">
+                        <div class="button_group_pop">
+                            <span><i class="fa fa-facebook"></i></span>
+                            <button> Facebook</button>
+                        </div>
+                        <div class="button_group_pop">
+                            <span><img src="image/google-symbol.png.png" alt=""></span>
+                            <button> Google</button>
+                        </div>
+                    </div>
+                    <div class="container_text_pop">
+                        <p><i class="fa fa-lock"></i> We never share anything without your permission</p>
+                    </div>
+                    <hr>
+                    <div class="form-group form_group_pop">
+                        <form action="">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="password" name="" id="" class="form-control" placeholder="Password" required>
+                            <a href="#" class="forgotPassword" id="forgotPassword">Forgot your password?</a>
+                            <button class="btn form-control">Log In</button>
+                            <div class="border_bottm_dotted"></div>
+                            <span>No account yet? <a href="#" id="logInId1">Sign up for free</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- my account pop box part 2  -->
+        <section class="form_pop_container_display">
+            <div class="container_pop_section" id="pop_form_card1">
+                <div class="pop_icon_show" id="popAlertForm1">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="container_flex_pop">
+                    <div class="login_name">
+                        <h1>Reset your password</h1>
+                        <hr>
+                    </div>
+                    <div class="container_text_pop">
+                        <p><i class="fa fa-lock"></i> Enter your email and we'll send you the instructions to recover your password:</p>
+                    </div>
+                    <hr>
+                    <div class="form-group form_group_pop">
+                        <form action="">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <button class="btn form-control">Log In</button>
+                            <div class="border_bottm_dotted"></div>
+                            <a href="#" id="returnButton"><i class="fa fa-angle-left"></i> Return to Log in</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- my account pop box 2  -->
+        <section class="form_pop_container_display">
+            <div class="container_pop_section" id="pop_form_card2">
+                <div class="pop_icon_show" id="popAlertForm2">
+                    <i class="fa fa-times"></i>
+                </div>
+                <div class="container_flex_pop">
+                    <div class="login_name">
+                        <h1>Log in</h1>
+                        <hr>
+                    </div>
+                    <div class="container_icon_pop">
+                        <div class="button_group_pop">
+                            <span><i class="fa fa-facebook"></i></span>
+                            <button> Facebook</button>
+                        </div>
+                        <div class="button_group_pop">
+                            <span><img src="image/google-symbol.png.png" alt=""></span>
+                            <button> Google</button>
+                        </div>
+                    </div>
+                    <div class="container_text_pop">
+                        <p><i class="fa fa-lock"></i> We never share anything without your permission</p>
+                    </div>
+                    <hr>
+                    <div class="form-group form_group_pop">
+                        <form action="">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                            <input type="password" name="" id="" class="form-control" placeholder="Password" required>
+                            <p class="forgotPassword1">By clicking on "Create your account" I accept the Privacy Policy and the General terms and conditions of eDreams</p>
+                            <button class="btn form-control">Create New Account</button>
+                            <div class="border_bottm_dotted"></div>
+                            <span>No account yet? <a href="#" id="newSignUp">Sign up for free</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+
+    <a href="#" class="arrowScroll" id="scrollButton"><i class="fa fa-angle-up"></i></a>
+
+    <footer>
+        <div class="container">
+            <div class="logo_footer">
+                <img src="image/favbicon.png.png" alt="">
+            </div>
+            <div class="list_item">
+                <ul>
+                    <li><a href="index1.html" target="_Blank">General terms and conditions</a></li>
+                    <li><a href="index2.html" target="_Blank">| Cookies policy |</a></li>
+                    <li><a href="index3.html" target="_Blank">Privacy policy</a></li>
+                </ul>
+                <div class="footer_text">
+                    <p>* Flight comparison carried out using basic fare (excluding ancillaries) for the same flight number. Monthly benchmark of 20,000 flights compared on average.
+                    *Hotel comparison carried out using basic fare for the same room type and same travel dates. Hotels in top 25 destinations and top 20 search results.
+                    Lowest price 9 out of 10 times on average for both flights and hotels.
+                    © 2021 - Come As We Travel. All rights reserved. Vacaciones Come As We Travel, S.L. (Sociedad Unipersonal). Registered address (not open to the public): c/ Conde de Peñalver, 5, 1º Ext.Izq, 28006 Madrid, Spain . Registered with the Registro Mercantil de Madrid, Tomo 36897, Folio 121, Hoja M-660117. Licensed Travel Agency CICMA 3682 and IATA-accredited agent. Customer care: use our Help Center. To contact us about your booking, you can do so immediately via our help centre, or by writing to Vacaciones Come As We Travel, S.L., Carrer de Bailèn 67-69, 08009 Barcelona, Spain.</p>
+                </div>
+                <div class="typeCard">
+                    <img src="image/slider/all-cards.png.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+                    
+                    
+    
+</body>
+</html>
